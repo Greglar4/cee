@@ -1,0 +1,27 @@
+{
+  "name": "cee",
+  "version": "0.0.1",
+  "description": "A complex function visualizer",
+  "homepage": "https://github.com/Greglar4/cee#readme",
+  "bugs": {
+    "url": "https://github.com/Greglar4/cee/issues",
+    "email": "greg.detweiler42@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "L Gregory Detweiler",
+    "email": "greg.detweiler42@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Greglar4/cee.git"
+  },
+  "dependencies": {
+    "mathjs": "^12.4.0",
+    "node": "^21.6.2",
+    "plotly": "^1.0.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
