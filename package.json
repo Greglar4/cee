@@ -17,11 +17,13 @@
     "url": "https://github.com/Greglar4/cee.git"
   },
   "dependencies": {
-    "mathjs": "^12.4.0",
-    "node": "^21.6.2",
+    "mathjs": "^14.4.0",
     "plotly": "^1.0.6"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^24.2.4",
     "typescript": "^5.3.3"
   }
 }
