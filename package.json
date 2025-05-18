@@ -7,6 +7,7 @@
     "url": "https://github.com/Greglar4/cee/issues",
     "email": "greg.detweiler42@gmail.com"
   },
+  "main": "out/main.mjs",
   "private": true,
   "license": "MIT",
   "author": {
@@ -14,22 +15,30 @@
     "email": "greg.detweiler42@gmail.com"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
     "mathjs": "^14.4.0",
-    "plotly": "^1.0.6"
+    "plotly.js-dist-min": "^3.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
+    "@types/plotly.js": "^3.0.0",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
     "conventional-changelog-conventionalcommits": "^8.0.0",
+    "esbuild": "^0.25.4",
     "eslint": "^9.27.0",
     "eslint-config-prettier": "^10.1.5",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
     "prettier": "^3.5.3",
     "semantic-release": "^24.2.4",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vite": "^6.3.5"
   },
   "lint-staged": {
     "src/**/*.ts": "eslint --cache --fix",
@@ -37,6 +46,8 @@
     "**/*": "prettier --write --it --ignore-unknown"
   },
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "build": "tsc -b tsconfig.json && node esbuild.mjs",
+    "dev": "vite --host"
   }
 }
