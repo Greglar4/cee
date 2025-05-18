@@ -18,10 +18,25 @@
     "plotly": "^1.0.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "conventional-changelog-conventionalcommits": "^8.0.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
     "semantic-release": "^24.2.4",
     "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "src/**/*.ts": "eslint --cache --fix",
+    "src/**/*.tsx": "eslint --cache --fix",
+    "**/*": "prettier --write --it --ignore-unknown"
+  },
+  "scripts": {
+    "prepare": "husky"
   }
 }
