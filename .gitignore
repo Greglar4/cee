@@ -1,3 +1,6 @@
 node_modules
 out
 .eslintcache
+dist
+tsconfig.node.tsbuildinfo
+vite.config.js

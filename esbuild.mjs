@@ -29,14 +29,14 @@ const plugins = [
 ]
 
 const ctx = await esbuild.context({
-	entryPoints: ['src/front-end/cee-app.tsx', 'src/front-end/dummy-line-plot.ts'],
+	entryPoints: ['src/front-end/cee-app.tsx', 'src/front-end/dummy-line-plot.ts', 'index.html'],
 	outdir: 'out',
 	target: 'ES2021',
 	format: 'esm',
 	outExtension: {
 		'.js': '.mjs',
 	},
-	loader: { '.ts': 'ts'},
+	loader: { '.ts': 'ts', '.html': 'copy'},
 	sourcemap: !minify,
 	platform: 'node',
 	minify,
